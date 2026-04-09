@@ -1,0 +1,40 @@
+/* base style */
+:root {
+  /* primary */
+  --brand-primary: #288052;
+  --brand-primary-hover: #184f32;
+  --brand-secondary: #b4b6ba;
+
+  /* text */
+  --text-primary: #030712;
+  --text-secondary: #6b7280;
+
+  /* background */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+}
+
+.dark {
+  /* override value */
+  --brand-primary: #288052;
+  --brand-primary-hover: #184f32;
+  --brand-secondary: #b4b6ba;
+
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+
+  --bg-primary: #030712;
+  --bg-secondary: #111827;
+}
+
+@theme {
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-primary-hover: var(--brand-primary-hover);
+  --color-brand-secondary: var(--brand-secondary);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+}

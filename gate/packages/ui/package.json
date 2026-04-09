@@ -1,0 +1,59 @@
+{
+  "name": "@gren/ui",
+  "version": "1.0.0",
+  "description": "Custom UI Library for @gren projects",
+  "author": "ridwanhanafi",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ridwanhanafi/gren-ui.git",
+    "directory": "packages/ui"
+  },
+  "exports": {
+    "./react": {
+      "types": "./dist/react.d.ts",
+      "import": "./dist/react.js"
+    },
+    "./style": "./dist/style.css",
+    "./tailwind": "./tailwind.css"
+  },
+  "files": [
+    "dist",
+    "src",
+    "tailwind.css",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup && cpy src/react/styles/global.css dist/style.css",
+    "dev": "tsup --watch & cpy src/react/styles/global.css dist/style.css --watch",
+    "lint": "eslint . --max-warnings 0",
+    "generate:component": "turbo gen react-component",
+    "check-types": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0",
+    "bootstrap": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.0.0"
+  },
+  "devDependencies": {
+    "@gren/eslint-config": "*",
+    "@gren/typescript-config": "*",
+    "@types/node": "^22.15.3",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "cpy-cli": "^7.0.0",
+    "eslint": "^9.39.1",
+    "tsup": "^8.5.1",
+    "typescript": "5.9.2"
+  }
+}

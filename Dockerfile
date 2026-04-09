@@ -1,0 +1,5 @@
+FROM oven/bun:1.3 AS base
+WORKDIR /app
+EXPOSE 3000
+EXPOSE 3001
+CMD ["sh"]

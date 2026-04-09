@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@import "@gren/ui/tailwind";
+@import "@gren/ui/style";
+
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+@custom-variant dark (&:where(.dark, .dark *));

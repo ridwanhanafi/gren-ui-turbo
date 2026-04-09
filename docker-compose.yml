@@ -1,0 +1,12 @@
+services:
+  grenui:
+    container_name: grenui
+    build:
+      context: .
+      target: base
+    volumes:
+      - ./gate:/app
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+    tty: true
