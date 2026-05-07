@@ -80,12 +80,17 @@ Contoh:
 
 Custom:
 
-- variant: ```primary```, ```secondary```
-- size: ```small```, ```medium```
-- disabled: ```true``` / ```false``` (boolean)
+- variant: ```primary (default)```, ```secondary```
+- size: ```small```, ```medium (default)```
+- disabled: ```true``` / ```false (default)``` (boolean)
 
 ```tsx
-<Button variant={"primary"}>Simpan</Button>
+<Button
+    variant="secondary"
+    size="small"
+>
+    Simpan
+</Button>
 ```
 </details>
 
@@ -93,19 +98,33 @@ Custom:
   <summary>Icon</summary>
 
 ```tsx
-<Icon name="plus-lg" />
+<Icon name="arrow-through-heart-fill" />
 ```
+note:
+
+```<i class="bi bi-arrow-through-heart-fill"></i> ---> arrow-through-heart-fill```
+
 </details>
 
 <details>
   <summary>Input</summary>
 
 ```tsx
+<Input />
+```
+
+Custom:
+
+- variant: ```primary (default)```, ```secondary```
+- size: ```small```, ```medium (default)```
+- disabled: ```true``` / ```false (default)``` (boolean)
+
+```tsx
 const [data, setData] = React.useState("")
 
-<Input onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-    setData(e.target.value)} 
-/>
+<Input name="adress" onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+    setData(e.target.value)
+} />
 ```
 </details>
 
@@ -115,6 +134,12 @@ const [data, setData] = React.useState("")
 ```tsx
 <Label>Username</Label>
 ```
+
+Custom:
+
+- variant: ```primary (default)```, ```secondary```
+- size: ```small```, ```medium (default)```
+
 </details>
 
 <details>
@@ -122,6 +147,19 @@ const [data, setData] = React.useState("")
 
 ```tsx
 <Select>
+    <Select.Option>Makan</Select.Option>
+    <Select.Option>Minum</Select.Option>
+</Select>
+```
+
+Custom:
+
+- variant: ```primary (default)```, ```secondary```
+- size: ```small```, ```medium (default)```
+- disabled: ```true``` / ```false (default)``` (boolean)
+
+```tsx
+<Select name="kategori" size="small">
     <Select.Option>Makan</Select.Option>
     <Select.Option>Minum</Select.Option>
 </Select>

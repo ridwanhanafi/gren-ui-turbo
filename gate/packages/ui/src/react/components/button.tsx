@@ -8,7 +8,7 @@ const button = cva(
   {
     variants: {
       variant: {
-        primary: ["bg-brand-primary", "text-primary", "dark:text-primary"],
+        primary: ["bg-brand-primary", "text-white", "dark:text-primary"],
         secondary: ["bg-brand-secondary", "text-primary", "dark:text-primary"],
       },
       size: {
@@ -35,9 +35,6 @@ const button = cva(
       {
         variant: "primary",
         size: "medium",
-        // **or** if you're a React.js user, `className` may feel more consistent:
-        // className: "uppercase"
-        className: "uppercase",
       },
     ],
     defaultVariants: {

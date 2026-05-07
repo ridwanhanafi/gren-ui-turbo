@@ -1,7 +1,6 @@
 "use client"
 
-import { Breadcrumb } from "@gren/ui/react";
-import { Button, Icon, Input, Label, Select, Textarea, Spinner, Badge, Alert, Card, Accordion, Modal } from "@gren/ui/react";
+import { Button, Icon, Input, Label, Select, Textarea, Spinner, Badge, Alert, Card, Accordion, Modal, Breadcrumb, InputGroup, AppShell, Navbar } from "@gren/ui/react";
 import React from "react";
 
 export default function Home() {
@@ -19,10 +18,7 @@ export default function Home() {
   }]
   return (
     <div>
-      <Button
-        variant="secondary"
-        size="medium"
-      >
+      <Button>
         Primary Button
       </Button>
       <Icon name="arrow-through-heart-fill" />
@@ -30,6 +26,7 @@ export default function Home() {
         setData(e.target.value)
       } />
       <Input size={"small"} />
+      <InputGroup name="username" rightIcon={<Icon name="person-fill" />} />
       <div>{data}</div>
       <Label>label</Label>
       <Select>
@@ -102,6 +99,25 @@ export default function Home() {
           <Button className="w-full !px-3 !py-2 text-sm font-medium">Ini Tombol</Button>
         </Card.Footer>
       </Card>
+
+      <AppShell>
+        <AppShell.Sidebar sidebarVisible={true}>
+          Sidebar Content
+        </AppShell.Sidebar>
+
+        <AppShell.Main>
+          {/* <Navbar toggleSidebar={true} onToggle={() => { }} leftContent={<Icon name="person-fill" />} rightContent={<Icon name="person-fill" />}>
+            <Navbar.NavbarMenu>
+              <Navbar.Menu href="https://google.com">Menu</Navbar.Menu>
+              <Navbar.Menu href="https://google.com">Menu</Navbar.Menu>
+              <Navbar.Menu href="https://google.com">Menu</Navbar.Menu>
+            </Navbar.NavbarMenu>
+          </Navbar> */}
+          <AppShell.Content>
+            sadas
+          </AppShell.Content>
+        </AppShell.Main>
+      </AppShell>
     </div>
   )
 }
